@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_CA_SALV_WRAPPER</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>CA-TBX: Abstract SALV wrapper</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>EPY</KEY>
+     <ENTRY>&lt;empty&gt;</ENTRY>
+     <LENGTH>80</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>HSE</KEY>
+     <ENTRY>S e l e c t i o n   v a l u e s</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>LTH</KEY>
+     <ENTRY>hierarchical list</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>LTP</KEY>
+     <ENTRY>print list</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>LTU</KEY>
+     <ENTRY>unknown type</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+   </TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ACTIVATE_TOP</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Activation of list header per page for printing</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ALIGN_TEXT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Align text in layout column of list header</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CALC_N_SET_WIDTH_N_ALIGNM_HDR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>List header columns: Calculate width and align</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CALC_N_SET_WIDTH_SEL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>List header columns: Calculate width for selections</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Constructor</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_TOP_HEADER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Create list header</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_TOP_SELECTIONS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Create list header area with selections</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FREE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Release objects when closing applicaton</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_TOP_ELEMENT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get / create layout object for list header</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GRAB_UNDERLYING_ALV_GRID_CTRL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get instance of ALV_GRID for additional functionalities</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MO_ALV_GRID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>ALV_GRID Instance behind current SALV for additional funct.</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MO_CLS_DESC</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Technical description of the current class itself</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MO_CONTAINER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Parentcontainer of the SALV</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MO_FCODES</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Function code constants (with suggested icons)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MO_SALV</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Base class for simple tables</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MO_TOP</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>List header grid layout object (normally with 3 rows+3 cols)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MO_TOP_OPTIONS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Constants for Top-of-Page in SALV wrapper</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MR_TABLE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Reference of the internal data table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MS_COL_WIDTH</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Calculated width of list header columns</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MS_HIDE_SELS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Selection fields to be hidden</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MT_COLS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>ALV list columns (only set when IV_PREPARE_DEFAULT = X)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_HEADER_FORMAT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>1=List hdr, 2=Sel, 3=List hdr+sel (see const C_HDR_FORMAT_*)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_LIST_TITLE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Short description/purpose of the list (as second title line)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_PRG_TITLE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Title of the program</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_PRG_VARIANTS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Program name for saving layout variants</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_TOP_ACTIVATED</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = List header is activated</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_TOP_SEL_CREA</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Header area for selections is already prepared</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_USED_SELS_ONLY</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Only output of selections with values</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ON_ADDED_FUNCTION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Handle additional functions (has to be redefined)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ON_DOUBLE_CLICK</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Handle double click (has to be redefined)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ON_LINK_CLICK</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Handle link click (has to be redefined)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>ON_TOP_OF_PAGE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Print output of list header</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>PREPARE_ALV</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Other ALV preparations (has to be redefined)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>PREPARE_DEFAULT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Do default preparations</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>PROCESS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Controls entire processing (has to be redefined)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_STATUS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Set individual GUI status</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TY_S_COLUMN_WIDTH</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Calculated width of list header columns</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>ACTIVATE_TOP</CMPNAME>
+     <SCONAME>IO_TOP</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Adapted or individual list header object</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ACTIVATE_TOP</CMPNAME>
+     <SCONAME>IS_HIDE_SELS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Selection fields to be hidden</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ACTIVATE_TOP</CMPNAME>
+     <SCONAME>IV_ACT_FOR_PRINTING</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Activate for printing</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ACTIVATE_TOP</CMPNAME>
+     <SCONAME>IV_HEADER_FORMAT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>1=List hdr, 2=Sel, 3=List hdr+sel (use const C_HDR_FORMAT_*)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ACTIVATE_TOP</CMPNAME>
+     <SCONAME>IV_USED_SELS_ONLY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Display only selections with values</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ALIGN_TEXT</CMPNAME>
+     <SCONAME>IV_ALIGN</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Alignment (use const MC_ALIGN_*)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ALIGN_TEXT</CMPNAME>
+     <SCONAME>IV_TEXT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Text to be aligned</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ALIGN_TEXT</CMPNAME>
+     <SCONAME>RV_TEXT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Aligned text</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALC_N_SET_WIDTH_N_ALIGNM_HDR</CMPNAME>
+     <SCONAME>IO_TOP</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Grid layout object for Top-of-Page (TOP)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALC_N_SET_WIDTH_N_ALIGNM_HDR</CMPNAME>
+     <SCONAME>RS_COLUMN_WIDTH</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Calculated width for output list header</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALC_N_SET_WIDTH_SEL</CMPNAME>
+     <SCONAME>IO_TOP</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Grid layout object for Top-of-Page (TOP)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALC_N_SET_WIDTH_SEL</CMPNAME>
+     <SCONAME>RS_COLUMN_WIDTH</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Calculated width for output selections</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IO_CONTAINER</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Container instance, if ALV is used inplace with controls</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IR_TABLE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Data ref. of output table (table can be empty at this point)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IV_CNT_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Name of the ALV control/container</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IV_LAYOUT_HANDLE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>ID to differ between different ALV calls in one program</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IV_LAYOUT_RESTRICTION</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Restriction of saving ALV layouts (use const C_LAYO_RESTR_*)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IV_LIST_TITLE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Short description (is set as ALV header and as 2nd title)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IV_PREPARE_DEFAULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Prepare ALV with standard settings + member MT_COLS</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IV_PRG_TITLE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Title of the program (will be used in list header)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IV_PRG_VARIANTS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Program name for saving layout variants</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IV_REGISTER_EVENTS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Register event methods (not TOP-OF-PAGE)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_TOP_HEADER</CMPNAME>
+     <SCONAME>IV_PAGE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Current page number (only during printing)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_TOP_HEADER</CMPNAME>
+     <SCONAME>RO_TOP</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Grid layout object for Top-of-Page(TOP)(with 3 rows+3 cols)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_TOP_ELEMENT</CMPNAME>
+     <SCONAME>IV_ELEMENT_ID</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>1=List header, 2=Selections (see const C_TOP_ELEM_*)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_TOP_ELEMENT</CMPNAME>
+     <SCONAME>RO_TOP_ELEMENT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Grid layout object for list header / selections</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PREPARE_ALV</CMPNAME>
+     <SCONAME>CX_SALV_ERROR</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>ALV: General Error Class (Checked During Syntax Check)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>PREPARE_ALV</CMPNAME>
+     <SCONAME>ZCX_CA_PARAM</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: Parameter error (INHERIT from this excep!)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_STATUS</CMPNAME>
+     <SCONAME>IV_FUNCTIONS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Activating the SALV Function groups (use const C_FUNCTION_*)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_STATUS</CMPNAME>
+     <SCONAME>IV_PFSTATUS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Individual status (copied from FG SALV_METADATA_STATUS)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_STATUS</CMPNAME>
+     <SCONAME>IV_PRG_STATUS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Name of the program the status is defined for</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

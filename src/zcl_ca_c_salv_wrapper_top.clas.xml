@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_CA_C_SALV_WRAPPER_TOP</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>CA-TBX: Constants n value checks for Top-of-Page in SALV Wr.</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ELEMENT_ID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Top-of-Page (TOP) element Id</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FORMAT_TYPE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Top-of-Page (TOP) format type</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get instance</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_TOP_ELEMENT_ID_VALID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Valid TOP element Id passed?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_TOP_FORMAT_TYPE_VALID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Valid TOP format type passed?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SINGLETON_INSTANCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Instance of the class itself</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Class instance</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_TOP_ELEMENT_ID_VALID</CMPNAME>
+     <SCONAME>TOP_ELEMENT_ID</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>TOP element Id</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_TOP_ELEMENT_ID_VALID</CMPNAME>
+     <SCONAME>ZCX_CA_SALV_WRAPPER</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: SALV Wrapper exceptions</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_TOP_FORMAT_TYPE_VALID</CMPNAME>
+     <SCONAME>TOP_FORMAT_TYPE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>TOP format type</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_TOP_FORMAT_TYPE_VALID</CMPNAME>
+     <SCONAME>ZCX_CA_SALV_WRAPPER</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: SALV Wrapper exceptions</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>
