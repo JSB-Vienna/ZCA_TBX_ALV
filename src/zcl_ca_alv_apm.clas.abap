@@ -20,7 +20,6 @@ ENDCLASS.
 
 CLASS ZCL_CA_ALV_APM IMPLEMENTATION.
 
-
   METHOD constructor.
     "-----------------------------------------------------------------*
     "   Constructor
@@ -29,15 +28,16 @@ CLASS ZCL_CA_ALV_APM IMPLEMENTATION.
          VALUE #(
             group_id        = 'itinere.at'
             artifact_id     = 'zca_tbx_alv'
-            version         = '0.1.0'
+            version         = '1.0.0'
             repository_type = 'abapGit'
             git_url         = 'https://github.com/JSB-Vienna/zca_tbx_alv.git'
             dependencies    =
                   VALUE #(
                       ( group_id       = 'itinere.at'
-                        artifact_id    = 'zca_tbx_base'
-                        git_url        = 'https://github.com/JSB-Vienna/zca_tbx_base.git'
-                        version        = '0.1.0'
-                        target_package = 'zca_tbx_base' ) ) ) ##no_text.
+                        artifact_id    = 'zca_toolbox'
+                        git_url        = 'https://github.com/JSB-Vienna/zca_toolbox.git'
+                        version        = '1.0.0'
+                        target_package = 'zca_toolbox' ) ) ) ##no_text.
   ENDMETHOD.                    "constructor
+
 ENDCLASS.
