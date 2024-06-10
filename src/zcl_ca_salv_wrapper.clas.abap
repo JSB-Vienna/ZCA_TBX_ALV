@@ -73,7 +73,7 @@ CLASS zcl_ca_salv_wrapper DEFINITION PUBLIC
           row
           column,
 
-      "! <p class="shorttext synchronized" lang="en">Handle link click (has to be redefined)</p>
+      "! <p class="shorttext synchronized" lang="en">Handle link / hotspot click (has to be redefined)</p>
       "!
       "! @parameter row    | <p class="shorttext synchronized" lang="en">Row index</p>
       "! @parameter column | <p class="shorttext synchronized" lang="en">Technical column name</p>

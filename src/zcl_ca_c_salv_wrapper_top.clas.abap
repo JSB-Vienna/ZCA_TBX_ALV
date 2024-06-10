@@ -37,23 +37,17 @@ CLASS zcl_ca_c_salv_wrapper_top DEFINITION PUBLIC
     METHODS:
       "! <p class="shorttext synchronized" lang="en">Valid TOP element Id passed?</p>
       "!
-      "! @parameter top_element_id      | <p class="shorttext synchronized" lang="en">TOP element Id</p>
-      "! @raising   zcx_ca_salv_wrapper | <p class="shorttext synchronized" lang="en">Common exception: SALV Wrapper exceptions</p>
+      "! @parameter top_element_id | <p class="shorttext synchronized" lang="en">TOP element Id</p>
       is_top_element_id_valid
         IMPORTING
-          top_element_id TYPE int1
-        RAISING
-          zcx_ca_salv_wrapper,
+          top_element_id TYPE int1,
 
       "! <p class="shorttext synchronized" lang="en">Valid TOP format type passed?</p>
       "!
-      "! @parameter top_format_type     | <p class="shorttext synchronized" lang="en">TOP format type</p>
-      "! @raising   zcx_ca_salv_wrapper | <p class="shorttext synchronized" lang="en">Common exception: SALV Wrapper exceptions</p>
+      "! @parameter top_format_type | <p class="shorttext synchronized" lang="en">TOP format type</p>
       is_top_format_type_valid
         IMPORTING
-          top_format_type TYPE int1
-        RAISING
-          zcx_ca_salv_wrapper.
+          top_format_type TYPE int1.
 
 
 * P R I V A T E   S E C T I O N

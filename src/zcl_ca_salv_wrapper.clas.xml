@@ -197,7 +197,7 @@
     <SEOCOMPOTX>
      <CMPNAME>ON_LINK_CLICK</CMPNAME>
      <LANGU>E</LANGU>
-     <DESCRIPT>Handle link click (has to be redefined)</DESCRIPT>
+     <DESCRIPT>Handle link / hotspot click (has to be redefined)</DESCRIPT>
     </SEOCOMPOTX>
     <SEOCOMPOTX>
      <CMPNAME>ON_TOP_OF_PAGE</CMPNAME>
