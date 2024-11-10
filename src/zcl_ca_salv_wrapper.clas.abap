@@ -261,7 +261,7 @@ CLASS zcl_ca_salv_wrapper DEFINITION PUBLIC
       "! <p class="shorttext synchronized" lang="en">Other ALV preparations (has to be redefined)</p>
       "!
       "! @raising cx_salv_error | <p class="shorttext synchronized" lang="en">ALV: General Error Class (Checked During Syntax Check)</p>
-      "! @raising zcx_ca_param  | <p class="shorttext synchronized" lang="en">Common exception: Parameter error (INHERIT from this excep!)</p>
+      "! @raising zcx_ca_param  | <p class="shorttext synchronized" lang="en">CA-TBX exception: Parameter error (INHERIT from this excep!)</p>
       prepare_alv
         RAISING
           cx_salv_error
@@ -280,11 +280,13 @@ CLASS zcl_ca_salv_wrapper DEFINITION PUBLIC
           iv_prg_status TYPE sycprog          DEFAULT sy-cprog
           iv_pfstatus   TYPE sypfkey
           iv_functions  TYPE salv_de_constant DEFAULT cl_salv_table=>c_functions_all.
+private section.
 ENDCLASS.
 
 
 
-CLASS zcl_ca_salv_wrapper IMPLEMENTATION.
+CLASS ZCL_CA_SALV_WRAPPER IMPLEMENTATION.
+
 
   METHOD activate_top.
     "-----------------------------------------------------------------*
@@ -939,5 +941,4 @@ CLASS zcl_ca_salv_wrapper IMPLEMENTATION.
                                 report        = iv_prg_status
                                 set_functions = iv_functions ).
   ENDMETHOD.                    "set_status
-
 ENDCLASS.
