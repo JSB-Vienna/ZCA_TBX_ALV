@@ -48,7 +48,7 @@ CLASS zcl_ca_salv_wrapper DEFINITION PUBLIC
           iv_layout_restriction TYPE salv_de_layout_restriction DEFAULT if_salv_c_layout=>restrict_none
           iv_prepare_default    TYPE abap_bool                  DEFAULT abap_true
           iv_prg_variants       TYPE sycprog                    DEFAULT sy-cprog
-          iv_layout_handle      TYPE slis_handl                 OPTIONAL
+          iv_layout_handle      TYPE slis_handl                 DEFAULT 'MAIN' ##no_text
           io_container          TYPE REF TO cl_gui_container    OPTIONAL
           iv_cnt_name           TYPE csequence                  OPTIONAL,
 
