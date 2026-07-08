@@ -9,6 +9,7 @@ CLASS zcl_ca_salv_wrapper DEFINITION PUBLIC
     INTERFACES:
       if_xo_const_message,
       if_salv_c_alignment,
+      if_salv_c_cell_type,
       if_salv_form_c_h_align.
 
 *   a l i a s e s
@@ -109,13 +110,21 @@ CLASS zcl_ca_salv_wrapper DEFINITION PUBLIC
   PROTECTED SECTION.
 *   a l i a s e s
     ALIASES:
-      c_align_list_cell_left         FOR  if_salv_c_alignment~left,         "1
-      c_align_list_cell_centered     FOR  if_salv_c_alignment~centered,     "3
-      c_align_list_cell_right        FOR  if_salv_c_alignment~right,        "2
+      c_cell_type_button           FOR  if_salv_c_cell_type~button,           "2
+      c_cell_type_checkbox         FOR  if_salv_c_cell_type~checkbox,         "1
+      c_cell_type_checkbox_hotspot FOR  if_salv_c_cell_type~checkbox_hotspot, "6
+      c_cell_type_dropdown         FOR  if_salv_c_cell_type~dropdown,         "3
+      c_cell_type_hotspot          FOR  if_salv_c_cell_type~hotspot,          "5
+      c_cell_type_link             FOR  if_salv_c_cell_type~link,             "4
+      c_cell_type_text             FOR  if_salv_c_cell_type~text,             "0
 
-      c_align_form_cell_left         FOR  if_salv_form_c_h_align~left,      "1
-      c_align_form_cell_centered     FOR  if_salv_form_c_h_align~center,    "2
-      c_align_form_cell_right        FOR  if_salv_form_c_h_align~right.     "3
+      c_align_list_cell_left       FOR  if_salv_c_alignment~left,         "1
+      c_align_list_cell_centered   FOR  if_salv_c_alignment~centered,     "3
+      c_align_list_cell_right      FOR  if_salv_c_alignment~right,        "2
+
+      c_align_form_cell_left       FOR  if_salv_form_c_h_align~left,      "1
+      c_align_form_cell_centered   FOR  if_salv_form_c_h_align~center,    "2
+      c_align_form_cell_right      FOR  if_salv_form_c_h_align~right.     "3
 
 *   l o c a l   t y p e   d e f i n i t i o n
     TYPES:
